@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compass English | Word Formation &amp; Vocabulary Grammar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      font-size: 18px;
+    }
+    @media (min-width: 1024px) {
+      :root {
+        font-size: 19px;
+      }
+    }
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background-color: #eef2f6;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+    .font-display {
+      font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .content-card {
+      background-color: #ffffff;
+      border-radius: 28px;
+      border: 2px solid #cbd5e1;
+      box-shadow: 0 14px 30px -14px rgba(15, 23, 42, 0.12);
+    }
+    .tile-btn {
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+    }
+    .tile-btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-indigo-700 selection:text-white">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-2 border-slate-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-3">
+      <button type="button" onclick="openSection('def')" class="flex items-center gap-3 text-left focus:outline-none">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-indigo-700 to-emerald-600 flex items-center justify-center text-white font-display font-extrabold text-lg shadow">
+          CE
+        </div>
+        <div>
+          <span class="font-display font-extrabold text-lg sm:text-xl text-slate-950 block leading-none">
+            Compass <span class="text-indigo-700">English</span>
+          </span>
+          <span class="text-xs font-extrabold text-slate-600 mt-1 block">Word Formation &amp; Vocabulary Grammar</span>
+        </div>
+      </button>
+
+      <div class="flex items-center gap-2">
+        <div class="inline-flex rounded-xl bg-slate-200 p-1">
+          <button type="button" id="btn-accent-us" onclick="setAccent('en-US')" class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-white text-indigo-800 shadow-sm transition">US</button>
+          <button type="button" id="btn-accent-uk" onclick="setAccent('en-GB')" class="px-2.5 py-1 rounded-lg text-xs font-extrabold text-slate-700 hover:text-slate-950 transition">UK</button>
+        </div>
+        <button type="button" onclick="openSection('quiz')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-indigo-700 hover:bg-indigo-800 text-white transition">
+          Thẻ Bài Tập
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+
+    <!-- ==================== THANH CHỌN THẺ NỘI DUNG CHÍNH (I -> VI) ==================== -->
+    <section class="content-card p-5 sm:p-6 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">WORD FORMATION &amp; VOCABULARY GRAMMAR</span>
+          <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950">
+            Chọn Thẻ Nội Dung Để Mở Riêng
+          </h1>
+        </div>
+        <span id="active-sec-badge" class="self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-950 text-xs font-extrabold border border-indigo-300">
+          Đang mở: I. ĐỊNH NGHĨA
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+        <button type="button" data-sec="def" onclick="openSection('def')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-indigo-700 text-white border-indigo-700 shadow">
+          <div class="text-xs font-extrabold opacity-85">THẺ I</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Định nghĩa</div>
+        </button>
+        <button type="button" data-sec="usage" onclick="openSection('usage')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500">
+          <div class="text-xs font-extrabold text-indigo-700">THẺ II</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Cách dùng</div>
+        </button>
+        <button type="button" data-sec="struct" onclick="openSection('struct')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500">
+          <div class="text-xs font-extrabold text-indigo-700">THẺ III</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Cấu trúc</div>
+        </button>
+        <button type="button" data-sec="notes" onclick="openSection('notes')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500">
+          <div class="text-xs font-extrabold text-indigo-700">THẺ IV</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Lưu ý</div>
+        </button>
+        <button type="button" data-sec="apply" onclick="openSection('apply')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500">
+          <div class="text-xs font-extrabold text-indigo-700">THẺ V</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Cách áp dụng</div>
+        </button>
+        <button type="button" data-sec="quiz" onclick="openSection('quiz')" class="sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500">
+          <div class="text-xs font-extrabold text-indigo-700">THẺ VI</div>
+          <div class="font-display font-extrabold text-sm sm:text-base mt-0.5">Bài tập (12)</div>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ I: ĐỊNH NGHĨA ==================== -->
+    <section id="panel-def" class="sec-panel space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="border-b-2 border-slate-200 pb-4 space-y-2">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ I • Nền Tảng Từ Vựng &amp; Ngữ Pháp</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950">
+            I. ĐỊNH NGHĨA (DEFINITION)
+          </h2>
+          <p class="text-base sm:text-lg text-slate-800 leading-relaxed">
+            <strong>Word Formation &amp; Vocabulary Grammar</strong> nghiên cứu cách từ vựng biến đổi hình thái và kết hợp theo quy luật ngữ pháp tự nhiên của tiếng Anh — giúp người học dùng đúng từ, đúng giới từ và đúng cụm từ cố định thay vì ghép từ theo tiếng Việt.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="rounded-3xl border-2 border-indigo-200 bg-indigo-50/70 p-6 space-y-2">
+            <span class="px-3 py-1 rounded-xl bg-indigo-700 text-white text-xs font-extrabold">1. PHRASAL VERBS (CỤM ĐỘNG TỪ)</span>
+            <p class="text-sm sm:text-base text-slate-800 leading-relaxed">
+              Động từ chính kết hợp với tiểu từ (<em>particle</em>: trạng từ hoặc giới từ) tạo thành nghĩa mới, thường khác nghĩa gốc của từng từ riêng lẻ (vd: <em>look up, give up, take off</em>).
+            </p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-teal-200 bg-teal-50/70 p-6 space-y-2">
+            <span class="px-3 py-1 rounded-xl bg-teal-700 text-white text-xs font-extrabold">2. PREPOSITIONAL VERBS (ĐỘNG TỪ + GIỚI TỪ)</span>
+            <p class="text-sm sm:text-base text-slate-800 leading-relaxed">
+              Động từ đi kèm một giới từ cố định để nối tới tân ngữ; giới từ giữ vai trò liên kết ngữ pháp và không tách rời tân ngữ như một số phrasal verb (vd: <em>depend on, insist on</em>).
+            </p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-amber-300 bg-amber-50/80 p-6 space-y-2">
+            <span class="px-3 py-1 rounded-xl bg-amber-600 text-white text-xs font-extrabold">3. PHRASAL-PREPOSITIONAL VERBS</span>
+            <p class="text-sm sm:text-base text-slate-800 leading-relaxed">
+              Cụm động từ gồm <strong>3 thành phần</strong>: <em>Động từ + Trạng từ tiểu từ + Giới từ</em> (vd: <em>put up with, look forward to, catch up with</em>), đi kèm tân ngữ ở phía sau.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-emerald-300 bg-emerald-50/80 p-6 space-y-2">
+            <span class="px-3 py-1 rounded-xl bg-emerald-700 text-white text-xs font-extrabold">4. COLLOCATIONS (KẾT HỢP TỪ TỰ NHIÊN)</span>
+            <p class="text-sm sm:text-base text-slate-800 leading-relaxed">
+              Những cặp/cụm từ thường xuyên đi cùng nhau theo thói quen bản ngữ: <strong>Verb + Noun</strong> (<em>make a decision</em>), <strong>Adjective + Noun</strong> (<em>heavy rain</em>), <strong>Verb + Preposition</strong> (<em>rely on</em>), <strong>Adverb + Adjective</strong> (<em>highly successful</em>).
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-end">
+          <button type="button" onclick="openSection('usage')" class="px-5 py-3 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm sm:text-base transition">
+            Sang Thẻ II: Cách dùng &amp; Kho 10+ cụm mỗi loại →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ II: CÁCH DÙNG (THẺ RIÊNG TỪNG LOẠI + ÍT NHẤT 10 CỤM/LOẠI) ==================== -->
+    <section id="panel-usage" class="sec-panel hidden space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="border-b-2 border-slate-200 pb-4 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ II • Thẻ Riêng Từng Nhóm (Mỗi Loại ≥ 10 Cụm)</span>
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950 mt-1">
+                II. CÁCH DÙNG &amp; DANH SÁCH CỤM THƯỜNG DÙNG
+              </h2>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-700">Bấm từng thẻ loại bên dưới để xem chi tiết</span>
+          </div>
+
+          <!-- 7 thẻ chọn nhóm -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2" id="type-tabs-grid">
+            <!-- Render bằng JS -->
+          </div>
+        </div>
+
+        <!-- Khung thẻ riêng của nhóm đang chọn -->
+        <div id="type-detail-card" class="space-y-5">
+          <!-- Render bằng JS -->
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="openSection('def')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+            ← Thẻ I: Định nghĩa
+          </button>
+          <button type="button" onclick="openSection('struct')" class="px-5 py-3 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm sm:text-base transition">
+            Sang Thẻ III: Cấu trúc →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ III: CẤU TRÚC ==================== -->
+    <section id="panel-struct" class="sec-panel hidden space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="border-b-2 border-slate-200 pb-4">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ III • Công Thức &amp; Trật Tự Từ</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950 mt-1">
+            III. CẤU TRÚC NGỮ PHÁP TỪNG LOẠI
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="rounded-3xl border-2 border-indigo-200 bg-white p-6 space-y-3">
+            <span class="px-3 py-1 rounded-xl bg-indigo-100 text-indigo-950 text-xs font-extrabold">1. Phrasal Verbs</span>
+            <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 font-mono-code text-sm font-bold text-indigo-950">
+              • Không tách tân ngữ: V + particle + O (look up a word)<br />
+              • Tách tân ngữ danh từ: V + O + particle (turn the light off)<br />
+              • Đại từ tân ngữ BẮT BUỘC ở giữa: V + me/it/them + particle (turn it off)
+            </div>
+            <p class="text-sm text-slate-800">Ví dụ: <em>Please write it down.</em> (Không nói <em>write down it</em>).</p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-teal-200 bg-white p-6 space-y-3">
+            <span class="px-3 py-1 rounded-xl bg-teal-100 text-teal-950 text-xs font-extrabold">2. Prepositional Verbs</span>
+            <div class="p-4 rounded-2xl bg-teal-50 border border-teal-200 font-mono-code text-sm font-bold text-teal-950">
+              V + Preposition + Noun / Pronoun / V-ing
+            </div>
+            <p class="text-sm text-slate-800">
+              • Tân ngữ luôn đứng sau giới từ: <em>depend on the weather, insist on paying</em>.<br />
+              • Khi có động từ theo sau giới từ, chia <strong>V-ing</strong>.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-amber-300 bg-white p-6 space-y-3">
+            <span class="px-3 py-1 rounded-xl bg-amber-200 text-amber-950 text-xs font-extrabold">3. Phrasal-Prepositional Verbs</span>
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 font-mono-code text-sm font-bold text-amber-950">
+              V + Adverb particle + Preposition + O (Noun / V-ing)
+            </div>
+            <p class="text-sm text-slate-800">
+              Ví dụ: <em>I cannot put up with his noise.</em> • <em>We look forward to meeting you.</em>
+            </p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-emerald-300 bg-white p-6 space-y-3">
+            <span class="px-3 py-1 rounded-xl bg-emerald-200 text-emerald-950 text-xs font-extrabold">4. Collocations</span>
+            <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 font-mono-code text-sm font-bold text-emerald-950">
+              • Verb + Noun (make a decision / take notes)<br />
+              • Adj + Noun (heavy rain / strong coffee)<br />
+              • Verb + Prep (rely on / apologize for)<br />
+              • Adv + Adj (highly successful / deeply concerned)
+            </div>
+            <p class="text-sm text-slate-800">Động từ chia theo thì &amp; chủ ngữ; tính từ đứng trước danh từ; trạng từ bổ nghĩa cho tính từ.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="openSection('usage')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+            ← Thẻ II: Cách dùng
+          </button>
+          <button type="button" onclick="openSection('notes')" class="px-5 py-3 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm sm:text-base transition">
+            Sang Thẻ IV: Lưu ý →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ IV: LƯU Ý ==================== -->
+    <section id="panel-notes" class="sec-panel hidden space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="border-b-2 border-slate-200 pb-4">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ IV • Những Bẫy Dễ Nhầm Nhất</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950 mt-1">
+            IV. LƯU Ý QUAN TRỌNG
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="rounded-3xl border-2 border-amber-300 bg-amber-50/60 p-6 space-y-2">
+            <span class="text-xs font-extrabold text-amber-900 uppercase">Lưu ý 01 • Vị trí đại từ</span>
+            <h3 class="font-display text-lg font-extrabold text-slate-950">Đại từ (it, them, him) đứng giữa Phrasal Verb tách được</h3>
+            <p class="text-sm font-bold text-rose-700">✗ Please give up it. / Turn off them.</p>
+            <p class="text-sm font-bold text-emerald-800">✓ Please give it up. / Turn them off.</p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-amber-300 bg-amber-50/60 p-6 space-y-2">
+            <span class="text-xs font-extrabold text-amber-900 uppercase">Lưu ý 02 • "to" là giới từ hay "to-V"?</span>
+            <h3 class="font-display text-lg font-extrabold text-slate-950">Trong "look forward to / object to / get used to", "to" là giới từ → + V-ing</h3>
+            <p class="text-sm font-bold text-rose-700">✗ I look forward to meet you.</p>
+            <p class="text-sm font-bold text-emerald-800">✓ I look forward to meeting you.</p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-amber-300 bg-amber-50/60 p-6 space-y-2">
+            <span class="text-xs font-extrabold text-amber-900 uppercase">Lưu ý 03 • Không dịch word-by-word Collocation</span>
+            <h3 class="font-display text-lg font-extrabold text-slate-950">Chọn từ theo thói quen collocation chuẩn</h3>
+            <p class="text-sm font-bold text-rose-700">✗ do a decision / strong rain / high successful</p>
+            <p class="text-sm font-bold text-emerald-800">✓ make a decision / heavy rain / highly successful</p>
+          </div>
+
+          <div class="rounded-3xl border-2 border-amber-300 bg-amber-50/60 p-6 space-y-2">
+            <span class="text-xs font-extrabold text-amber-900 uppercase">Lưu ý 04 • Phân biệt Phrasal vs. Prepositional</span>
+            <h3 class="font-display text-lg font-extrabold text-slate-950">Không tự ý tách tân ngữ ở Prepositional Verb</h3>
+            <p class="text-sm font-bold text-rose-700">✗ She insisted the plan on.</p>
+            <p class="text-sm font-bold text-emerald-800">✓ She insisted on the plan.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="openSection('struct')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+            ← Thẻ III: Cấu trúc
+          </button>
+          <button type="button" onclick="openSection('apply')" class="px-5 py-3 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm sm:text-base transition">
+            Sang Thẻ V: Cách áp dụng →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ V: CÁCH ÁP DỤNG ==================== -->
+    <section id="panel-apply" class="sec-panel hidden space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="border-b-2 border-slate-200 pb-4">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ V • Luyện Vận Dụng Thực Tế</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950 mt-1">
+            V. CÁCH ÁP DỤNG TRONG NÓI &amp; VIẾT
+          </h2>
+        </div>
+
+        <div class="rounded-3xl bg-slate-950 text-white p-6 sm:p-7 space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">Thẻ Ghép Câu &amp; Kiểm Tra Cụm Từ</span>
+              <h3 class="font-display text-xl font-extrabold">Chọn Một Cụm Mẫu Để Xem Cách Đặt Câu Chuẩn</h3>
+            </div>
+            <button type="button" onclick="speakText(document.getElementById('apply-ex').textContent)" class="self-start sm:self-auto px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm transition">
+              🔊 Nghe Câu Ví Dụ
+            </button>
+          </div>
+
+          <select id="apply-select" onchange="updateApplyBox()" class="w-full rounded-2xl bg-slate-900 border-2 border-slate-700 px-4 py-3 text-sm sm:text-base font-bold text-white focus:outline-none focus:border-emerald-400">
+            <option value="Phrasal Verb | I always look up unfamiliar words in a dictionary. | Tra cứu từ mới trong từ điển.">look up (Phrasal Verb) — Tra cứu từ mới</option>
+            <option value="Phrasal Verb | Never give up when learning a new language. | Đừng bao giờ bỏ cuộc khi học ngoại ngữ.">give up (Phrasal Verb) — Từ bỏ / bỏ cuộc</option>
+            <option value="Phrasal Verb | The plane took off on time despite the wind. | Máy bay cất cánh đúng giờ.">take off (Phrasal Verb) — Cất cánh / cởi ra</option>
+            <option value="Prepositional Verb | Your success depends on your daily effort. | Thành công phụ thuộc vào nỗ lực hằng ngày.">depend on (Prepositional Verb) — Phụ thuộc vào</option>
+            <option value="Prepositional Verb | She insisted on paying for our lunch. | Cô ấy khăng khăng trả tiền bữa trưa.">insist on (Prepositional Verb) — Khăng khăng / nhất quyết</option>
+            <option value="Phrasal-Prepositional Verb | I cannot put up with loud noise while studying. | Tôi không thể chịu đựng tiếng ồn khi học.">put up with (Phrasal-Prepositional) — Chịu đựng</option>
+            <option value="Collocation (Verb + Noun) | You need to make a decision before Friday. | Bạn cần đưa ra quyết định trước thứ Sáu.">make a decision (Verb + Noun) — Đưa ra quyết định</option>
+            <option value="Collocation (Adj + Noun) | Heavy rain caused traffic jams this morning. | Mưa lớn gây kẹt xe sáng nay.">heavy rain (Adj + Noun) — Mưa lớn</option>
+            <option value="Collocation (Verb + Prep) | Good learners rely on smart study habits. | Người học giỏi dựa vào thói quen học thông minh.">rely on (Verb + Prep) — Dựa vào / tin cậy vào</option>
+            <option value="Collocation (Adv + Adj) | She runs a highly successful English club. | Cô ấy điều hành một CLB tiếng Anh rất thành công.">highly successful (Adv + Adj) — Rất thành công</option>
+          </select>
+
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
+            <div id="apply-tag" class="text-xs font-extrabold uppercase tracking-wider text-amber-300">Phrasal Verb</div>
+            <div id="apply-ex" class="font-display text-xl sm:text-2xl font-extrabold text-emerald-300">
+              I always look up unfamiliar words in a dictionary.
+            </div>
+            <div id="apply-vi" class="text-sm text-slate-300">Tra cứu từ mới trong từ điển.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="openSection('notes')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+            ← Thẻ IV: Lưu ý
+          </button>
+          <button type="button" onclick="openSection('quiz')" class="px-5 py-3 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm sm:text-base transition">
+            Sang Thẻ VI: Bài tập (12 câu) →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THẺ VI: BÀI TẬP (12 CÂU RIÊNG BIỆT) ==================== -->
+    <section id="panel-quiz" class="sec-panel hidden space-y-6">
+      <div class="content-card p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-slate-200 pb-4">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ VI • 12 Thẻ Câu Hỏi Riêng Biệt</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950 mt-1">
+              VI. MỘT SỐ BÀI TẬP
+            </h2>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <div class="px-4 py-2 rounded-2xl bg-indigo-100 border border-indigo-300 text-indigo-950 font-extrabold text-sm">
+              Điểm: <span id="quiz-score">0</span> / 12
+            </div>
+            <button type="button" onclick="resetQuiz()" class="px-3.5 py-2 rounded-2xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+              Làm lại
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap gap-1.5" id="quiz-pills"></div>
+          <button type="button" id="btn-all-q" onclick="toggleAllQ()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-xs font-extrabold text-slate-900 transition">
+            Xem tất cả 12 thẻ câu
+          </button>
+        </div>
+
+        <div id="quiz-stage" class="space-y-4"></div>
+
+        <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="openSection('apply')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold text-sm transition">
+            ← Thẻ V: Cách áp dụng
+          </button>
+          <button type="button" onclick="gradeQuiz()" class="px-6 py-3.5 rounded-2xl bg-indigo-700 hover:bg-indigo-800 text-white font-extrabold text-base shadow-lg shadow-indigo-700/20 transition">
+            Chấm Điểm Tất Cả (12 Câu)
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let currentAccent = 'en-US';
+    let activeTypeIdx = 0;
+    let activeQIdx = 0;
+    let showAllQ = false;
+    const answersMap = {};
+
+    const SEC_LABELS = {
+      def: 'Đang mở: I. ĐỊNH NGHĨA',
+      usage: 'Đang mở: II. CÁCH DÙNG',
+      struct: 'Đang mở: III. CẤU TRÚC',
+      notes: 'Đang mở: IV. LƯU Ý',
+      apply: 'Đang mở: V. CÁCH ÁP DỤNG',
+      quiz: 'Đang mở: VI. BÀI TẬP (12)'
+    };
+
+    function openSection(key) {
+      document.querySelectorAll('.sec-panel').forEach(p => p.classList.add('hidden'));
+      const target = document.getElementById(`panel-${key}`);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.sec-nav-btn').forEach(btn => {
+        const isAct = btn.getAttribute('data-sec') === key;
+        btn.className = isAct
+          ? 'sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-indigo-700 text-white border-indigo-700 shadow'
+          : 'sec-nav-btn tile-btn p-3.5 rounded-2xl border-2 text-left bg-slate-50 text-slate-900 border-slate-300 hover:border-indigo-500';
+      });
+
+      document.getElementById('active-sec-badge').textContent = SEC_LABELS[key] || '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function setAccent(acc) {
+      currentAccent = acc;
+      document.getElementById('btn-accent-us').className = acc === 'en-US'
+        ? 'px-2.5 py-1 rounded-lg text-xs font-extrabold bg-white text-indigo-800 shadow-sm transition'
+        : 'px-2.5 py-1 rounded-lg text-xs font-extrabold text-slate-700 hover:text-slate-950 transition';
+      document.getElementById('btn-accent-uk').className = acc === 'en-GB'
+        ? 'px-2.5 py-1 rounded-lg text-xs font-extrabold bg-white text-indigo-800 shadow-sm transition'
+        : 'px-2.5 py-1 rounded-lg text-xs font-extrabold text-slate-700 hover:text-slate-950 transition';
+    }
+
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = currentAccent;
+      u.rate = 0.96;
+      window.speechSynthesis.speak(u);
+    }
+
+    // 7 nhóm nội dung (mỗi nhóm có >= 10 cụm thường dùng)
+    const VOCAB_GROUPS = [
+      {
+        shortName: 'Phrasal Verbs',
+        fullName: 'Phrasal Verbs (Cụm động từ)',
+        howToUse: 'Dùng phổ biến trong giao tiếp và bài đọc/nghe để diễn đạt hành động súc tích, tự nhiên; nhiều cụm có nghĩa khác hẳn động từ gốc.',
+        items: [
+          { phrase: 'look up', meaning: 'tra cứu (từ điển, thông tin)', ex: 'Look up new words in your notebook.' },
+          { phrase: 'give up', meaning: 'từ bỏ, bỏ cuộc', ex: 'Never give up when the test is hard.' },
+          { phrase: 'take off', meaning: 'cất cánh (máy bay); cởi ra; thành công nhanh', ex: 'The flight took off twenty minutes late.' },
+          { phrase: 'turn on / off', meaning: 'bật / tắt thiết bị, đèn', ex: 'Please turn off the lights before leaving.' },
+          { phrase: 'find out', meaning: 'tìm ra, phát hiện thông tin', ex: 'We need to find out what happened.' },
+          { phrase: 'set up', meaning: 'thành lập, thiết lập, sắp đặt', ex: 'They set up a new study group.' },
+          { phrase: 'carry out', meaning: 'tiến hành, thực hiện (kế hoạch/khảo sát)', ex: 'The team carried out a survey.' },
+          { phrase: 'put off', meaning: 'trì hoãn sang lúc khác', ex: 'Do not put off your homework.' },
+          { phrase: 'pick up', meaning: 'đón ai; nhặt lên; học lỏm/tiếp thu nhanh', ex: 'I will pick you up at 6 PM.' },
+          { phrase: 'run out of', meaning: 'hết sạch (thời gian, tiền, nguyên liệu)', ex: 'We ran out of time during the quiz.' }
+        ]
+      },
+      {
+        shortName: 'Prepositional Verbs',
+        fullName: 'Prepositional Verbs (Động từ đi kèm giới từ)',
+        howToUse: 'Dùng khi động từ cần kết nối với tân ngữ qua một giới từ cố định; cần học theo cụm để chọn đúng giới từ.',
+        items: [
+          { phrase: 'depend on', meaning: 'phụ thuộc vào', ex: 'Grades depend on your steady effort.' },
+          { phrase: 'insist on', meaning: 'khăng khăng, nhất quyết', ex: 'He insisted on helping us.' },
+          { phrase: 'listen to', meaning: 'lắng nghe', ex: 'Listen to the audio carefully.' },
+          { phrase: 'wait for', meaning: 'chờ đợi ai/cái gì', ex: 'We are waiting for the teacher.' },
+          { phrase: 'apologize for', meaning: 'xin lỗi vì điều gì', ex: 'She apologized for being late.' },
+          { phrase: 'apply for', meaning: 'nộp đơn xin (việc, học bổng)', ex: 'He applied for a scholarship.' },
+          { phrase: 'concentrate on', meaning: 'tập trung vào', ex: 'Concentrate on the main idea.' },
+          { phrase: 'succeed in', meaning: 'thành công trong việc gì', ex: 'She succeeded in passing the exam.' },
+          { phrase: 'belong to', meaning: 'thuộc về ai/tổ chức nào', ex: 'This notebook belongs to Minh.' },
+          { phrase: 'consist of', meaning: 'bao gồm, gồm có', ex: 'The course consists of ten units.' }
+        ]
+      },
+      {
+        shortName: 'Phrasal-Prep Verbs',
+        fullName: 'Phrasal-Prepositional Verbs (Cụm 3 thành phần)',
+        howToUse: 'Kết hợp động từ + tiểu từ trạng từ + giới từ, luôn có tân ngữ phía sau để diễn đạt sắc thái hành động rõ nét.',
+        items: [
+          { phrase: 'put up with', meaning: 'chịu đựng (sự phiền phức, thói quen xấu)', ex: 'I cannot put up with this noise.' },
+          { phrase: 'look forward to', meaning: 'mong chờ, háo hức mong đợi', ex: 'We look forward to seeing you.' },
+          { phrase: 'catch up with', meaning: 'đuổi kịp, bắt kịp (tiến độ, người khác)', ex: 'Read the notes to catch up with class.' },
+          { phrase: 'keep up with', meaning: 'theo kịp, cập nhật kịp', ex: 'It is hard to keep up with trends.' },
+          { phrase: 'run out of', meaning: 'cạn kiệt, hết sạch', ex: 'They ran out of budget early.' },
+          { phrase: 'come up with', meaning: 'nghĩ ra (ý tưởng, giải pháp)', ex: 'She came up with a smart plan.' },
+          { phrase: 'get along with', meaning: 'hòa thuận, ăn ý với ai', ex: 'He gets along with his teammates.' },
+          { phrase: 'look down on', meaning: 'coi thường, xem thường', ex: 'Never look down on beginners.' },
+          { phrase: 'look up to', meaning: 'ngưỡng mộ, kính trọng', ex: 'Students look up to dedicated teachers.' },
+          { phrase: 'cut down on', meaning: 'cắt giảm (chi tiêu, đường, thời gian màn hình)', ex: 'You should cut down on screen time.' }
+        ]
+      },
+      {
+        shortName: 'Col: Verb + Noun',
+        fullName: 'Collocations — Verb + Noun (Động từ + Danh từ)',
+        howToUse: 'Dùng đúng động từ đi kèm danh từ để câu văn tự nhiên như người bản ngữ (ví dụ: make a decision, take notes).',
+        items: [
+          { phrase: 'make a decision', meaning: 'đưa ra quyết định', ex: 'We need to make a decision today.' },
+          { phrase: 'take notes', meaning: 'ghi chép bài', ex: 'Always take notes during class.' },
+          { phrase: 'make progress', meaning: 'tiến bộ', ex: 'You are making steady progress.' },
+          { phrase: 'do homework', meaning: 'làm bài tập về nhà', ex: 'She does her homework every night.' },
+          { phrase: 'pay attention', meaning: 'chú ý', ex: 'Pay attention to the pronunciation.' },
+          { phrase: 'keep a promise', meaning: 'giữ lời hứa', ex: 'A good friend keeps a promise.' },
+          { phrase: 'break a record', meaning: 'phá kỷ lục', ex: 'He broke the school record.' },
+          { phrase: 'raise awareness', meaning: 'nâng cao nhận thức', ex: 'The campaign raises public awareness.' },
+          { phrase: 'solve a problem', meaning: 'giải quyết vấn đề', ex: 'Let us solve this problem step by step.' },
+          { phrase: 'catch a cold', meaning: 'bị cảm lạnh', ex: 'Wear a jacket so you do not catch a cold.' }
+        ]
+      },
+      {
+        shortName: 'Col: Adj + Noun',
+        fullName: 'Collocations — Adjective + Noun (Tính từ + Danh từ)',
+        howToUse: 'Kết hợp tính từ chuẩn đi trước danh từ để miêu tả mức độ hoặc tính chất chính xác.',
+        items: [
+          { phrase: 'heavy rain', meaning: 'mưa lớn, mưa xối xả', ex: 'Heavy rain delayed the match.' },
+          { phrase: 'strong coffee', meaning: 'cà phê đậm vị', ex: 'He drinks strong coffee every morning.' },
+          { phrase: 'high quality', meaning: 'chất lượng cao', ex: 'They provide high quality lessons.' },
+          { phrase: 'big difference', meaning: 'sự khác biệt lớn', ex: 'Daily review makes a big difference.' },
+          { phrase: 'strict rule', meaning: 'quy định nghiêm ngặt', ex: 'The center has a strict rule on attendance.' },
+          { phrase: 'golden opportunity', meaning: 'cơ hội vàng', ex: 'This is a golden opportunity to practice.' },
+          { phrase: 'broad daylight', meaning: 'giữa ban ngày rõ ràng', ex: 'The incident happened in broad daylight.' },
+          { phrase: 'deep breath', meaning: 'hơi thở sâu', ex: 'Take a deep breath before speaking.' },
+          { phrase: 'valid reason', meaning: 'lý do chính đáng / hợp lệ', ex: 'Give a valid reason for your absence.' },
+          { phrase: 'vital role', meaning: 'vai trò thiết yếu', ex: 'Vocabulary plays a vital role in reading.' }
+        ]
+      },
+      {
+        shortName: 'Col: Verb + Prep',
+        fullName: 'Collocations — Verb + Preposition (Động từ + Giới từ)',
+        howToUse: 'Ghi nhớ cặp động từ + giới từ đặc trưng giúp tránh sai giới từ trong bài thi ngữ pháp và viết câu.',
+        items: [
+          { phrase: 'rely on', meaning: 'dựa vào, tin cậy vào', ex: 'You can rely on her accuracy.' },
+          { phrase: 'result in', meaning: 'dẫn đến (kết quả)', ex: 'Carelessness can result in mistakes.' },
+          { phrase: 'result from', meaning: 'do nguyên nhân từ', ex: 'The delay resulted from bad weather.' },
+          { phrase: 'cope with', meaning: 'đối phó, xoay xở với (khó khăn/áp lực)', ex: 'Good habits help cope with stress.' },
+          { phrase: 'focus on', meaning: 'tập trung vào', ex: 'Focus on one grammar point at a time.' },
+          { phrase: 'prepare for', meaning: 'chuẩn bị cho', ex: 'Students are preparing for the exam.' },
+          { phrase: 'apologize to', meaning: 'xin lỗi ai', ex: 'He apologized to his teammate.' },
+          { phrase: 'agree with', meaning: 'đồng ý với ai / hợp với', ex: 'I agree with your explanation.' },
+          { phrase: 'protect from', meaning: 'bảo vệ khỏi', ex: 'Sunscreen protects skin from UV rays.' },
+          { phrase: 'benefit from', meaning: 'hưởng lợi từ', ex: 'Everyone benefits from clear feedback.' }
+        ]
+      },
+      {
+        shortName: 'Col: Adv + Adj',
+        fullName: 'Collocations — Adverb + Adjective (Trạng từ + Tính từ)',
+        howToUse: 'Dùng trạng từ tăng cường hoặc sắc thái chuẩn đi trước tính từ để nâng tầm diễn đạt trong IELTS/TOEIC và văn viết.',
+        items: [
+          { phrase: 'highly successful', meaning: 'rất thành công', ex: 'It was a highly successful workshop.' },
+          { phrase: 'deeply concerned', meaning: 'vô cùng lo ngại / quan tâm sâu sắc', ex: 'Parents are deeply concerned about safety.' },
+          { phrase: 'widely available', meaning: 'có sẵn rộng rãi', ex: 'Online materials are widely available.' },
+          { phrase: 'fully aware', meaning: 'nhận thức đầy đủ', ex: 'Are you fully aware of the deadline?' },
+          { phrase: 'strongly recommended', meaning: 'được khuyến nghị mạnh mẽ', ex: 'Practice tests are strongly recommended.' },
+          { phrase: 'closely related', meaning: 'liên quan chặt chẽ', ex: 'Grammar and reading are closely related.' },
+          { phrase: 'bitterly cold', meaning: 'lạnh buốt thấu xương', ex: 'The wind was bitterly cold at night.' },
+          { phrase: 'perfectly clear', meaning: 'hoàn toàn rõ ràng', ex: 'The instructions are perfectly clear.' },
+          { phrase: 'painfully slow', meaning: 'chậm chạp gây sốt ruột', ex: 'The old computer was painfully slow.' },
+          { phrase: 'utterly amazed', meaning: 'hoàn toàn kinh ngạc', ex: 'We were utterly amazed by her progress.' }
+        ]
+      }
+    ];
+
+    function renderTypeTabs() {
+      const grid = document.getElementById('type-tabs-grid');
+      grid.innerHTML = VOCAB_GROUPS.map((grp, idx) => {
+        const active = idx === activeTypeIdx;
+        return `
+          <button type="button" onclick="selectType(${idx})"
+            class="tile-btn p-3 rounded-2xl border-2 text-left transition ${
+              active
+                ? 'bg-slate-950 text-emerald-300 border-slate-950 shadow'
+                : 'bg-white text-slate-900 border-slate-300 hover:border-indigo-500'
+            }">
+            <div class="text-[11px] font-extrabold opacity-75">NHÓM ${idx + 1}</div>
+            <div class="font-display font-extrabold text-xs sm:text-sm leading-snug mt-0.5">${grp.shortName}</div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderTypeDetail() {
+      const grp = VOCAB_GROUPS[activeTypeIdx];
+      const box = document.getElementById('type-detail-card');
+
+      box.innerHTML = `
+        <div class="rounded-3xl border-2 border-slate-300 bg-slate-50 p-6 space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ Nhóm ${activeTypeIdx + 1} / ${VOCAB_GROUPS.length} • ${grp.items.length} Cụm Thường Dùng</span>
+              <h3 class="font-display text-xl sm:text-2xl font-extrabold text-slate-950 mt-0.5">${grp.fullName}</h3>
+            </div>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-800 leading-relaxed bg-white p-4 rounded-2xl border border-slate-200">
+            <strong class="text-indigo-800">Cách dùng:</strong> ${grp.howToUse}
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-3.5">
+            ${grp.items.map((it, i) => `
+              <div class="p-4 rounded-2xl bg-white border-2 border-slate-200 flex items-start justify-between gap-3">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="text-xs font-extrabold text-slate-400">#${i + 1}</span>
+                    <span class="font-mono-code font-extrabold text-base text-indigo-800">${it.phrase}</span>
+                  </div>
+                  <p class="text-sm font-bold text-slate-900">${it.meaning}</p>
+                  <p class="text-xs sm:text-sm text-slate-700 italic">"${it.ex}"</p>
+                </div>
+                <button type="button" onclick="speakText('${it.ex.replace(/'/g, "\\'")}')"
+                  class="shrink-0 w-9 h-9 rounded-xl bg-slate-100 hover:bg-indigo-100 border border-slate-300 flex items-center justify-center transition" title="Nghe ví dụ">
+                  🔊
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function selectType(idx) {
+      activeTypeIdx = idx;
+      renderTypeTabs();
+      renderTypeDetail();
+    }
+
+    function updateApplyBox() {
+      const [tag, ex, vi] = document.getElementById('apply-select').value.split(' | ');
+      document.getElementById('apply-tag').textContent = tag;
+      document.getElementById('apply-ex').textContent = ex;
+      document.getElementById('apply-vi').textContent = vi;
+    }
+
+    // 12 câu hỏi riêng biệt cho Thẻ VI
+    const QUIZ_LIST = [
+      { id: 0, type: 'mcq', q: '1. If you do not know a word, you can ______ it ______ in a dictionary.', opts: ['A. look / up', 'B. take / off', 'C. put / off', 'D. run / out'], ans: 0, exp: '"look up" = tra cứu từ/thông tin.' },
+      { id: 1, type: 'mcq', q: '2. The airplane will ______ in ten minutes.', opts: ['A. give up', 'B. take off', 'C. look up', 'D. turn off'], ans: 1, exp: '"take off" = cất cánh (máy bay).' },
+      { id: 2, type: 'mcq', q: '3. Our weekend plan ______ the weather forecast.', opts: ['A. depends on', 'B. insists on', 'C. puts up with', 'D. makes a decision'], ans: 0, exp: '"depend on" = phụ thuộc vào.' },
+      { id: 3, type: 'mcq', q: '4. She ______ paying for the coffee even though we offered to share.', opts: ['A. depended on', 'B. insisted on', 'C. looked up', 'D. gave up'], ans: 1, exp: '"insist on + V-ing" = khăng khăng / nhất quyết làm gì.' },
+      { id: 4, type: 'mcq', q: '5. I cannot ______ noisy neighbors when I am trying to study.', opts: ['A. put up with', 'B. make a decision', 'C. heavy rain', 'D. highly successful'], ans: 0, exp: '"put up with" (Phrasal-prepositional verb) = chịu đựng.' },
+      { id: 5, type: 'fill', q: '6. Điền Verb + Noun chuẩn: You should ______ a decision before tomorrow.', placeholder: 'make / do', answers: ['make'], exp: 'Collocation chuẩn: "make a decision" (đưa ra quyết định).' },
+      { id: 6, type: 'fill', q: '7. Điền Adj + Noun chuẩn: There was ______ rain last night.', placeholder: 'heavy / strong', answers: ['heavy'], exp: 'Collocation chuẩn: "heavy rain" (mưa lớn).' },
+      { id: 7, type: 'fill', q: '8. Điền Verb + Prep chuẩn: Students can ______ on their teacher for guidance.', placeholder: 'rely / insist', answers: ['rely'], exp: 'Collocation chuẩn: "rely on" (dựa vào / tin cậy vào).' },
+      { id: 8, type: 'fill', q: '9. Điền Adv + Adj chuẩn: It was a ______ successful event.', placeholder: 'highly / heavy', answers: ['highly'], exp: 'Collocation chuẩn: "highly successful" (rất thành công).' },
+      { id: 9, type: 'mcq', q: '10. Which sentence uses the pronoun correctly with a separable phrasal verb?', opts: [
+        'A. Please turn off it.',
+        'B. Please turn it off.',
+        'C. Please off turn it.',
+        'D. Please it turn off.'
+      ], ans: 1, exp: 'Đại từ tân ngữ ("it") phải đứng ở giữa động từ và tiểu từ: "turn it off".' },
+      { id: 10, type: 'mcq', q: '11. We are looking forward to ______ you at the workshop.', opts: ['A. meet', 'B. met', 'C. meeting', 'D. meets'], ans: 2, exp: 'Sau "look forward to" ("to" là giới từ) dùng V-ing: "meeting".' },
+      { id: 11, type: 'mcq', q: '12. Which pair is a natural "Adverb + Adjective" collocation?', opts: [
+        'A. deeply concerned',
+        'B. heavily successful',
+        'C. strongly rain',
+        'D. widely decision'
+      ], ans: 0, exp: '"deeply concerned" là cụm Adv + Adj chuẩn tự nhiên.' }
+    ];
+
+    function renderQuizPills() {
+      const el = document.getElementById('quiz-pills');
+      el.innerHTML = QUIZ_LIST.map((q, i) => {
+        const act = !showAllQ && i === activeQIdx;
+        return `
+          <button type="button" onclick="jumpQ(${i})"
+            class="w-9 h-9 rounded-xl text-xs font-extrabold border transition ${
+              act ? 'bg-indigo-700 text-white border-indigo-700' : 'bg-white text-slate-800 border-slate-300 hover:border-indigo-500'
+            }">
+            ${i + 1}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function jumpQ(i) {
+      showAllQ = false;
+      activeQIdx = i;
+      document.getElementById('btn-all-q').textContent = 'Xem tất cả 12 thẻ câu';
+      renderQuizPills();
+      renderQuizStage();
+    }
+
+    function toggleAllQ() {
+      showAllQ = !showAllQ;
+      document.getElementById('btn-all-q').textContent = showAllQ ? 'Xem từng thẻ (1 câu/lần)' : 'Xem tất cả 12 thẻ câu';
+      renderQuizPills();
+      renderQuizStage();
+    }
+
+    function saveQAns(id, val) {
+      answersMap[id] = val;
+    }
+
+    function renderQuizStage() {
+      const stage = document.getElementById('quiz-stage');
+      const items = showAllQ ? QUIZ_LIST : [QUIZ_LIST[activeQIdx]];
+
+      stage.innerHTML = items.map(item => {
+        const saved = answersMap[item.id] ?? '';
+        let bodyHtml = '';
+
+        if (item.type === 'mcq') {
+          bodyHtml = `
+            <div class="grid sm:grid-cols-2 gap-2.5">
+              ${item.opts.map((opt, idx) => `
+                <label class="flex items-center gap-2.5 p-3.5 rounded-2xl bg-white border-2 ${
+                  parseInt(saved, 10) === idx ? 'border-indigo-600 bg-indigo-50/40' : 'border-slate-200 hover:border-indigo-400'
+                } cursor-pointer transition">
+                  <input type="radio" name="q-opt-${item.id}" value="${idx}" ${parseInt(saved, 10) === idx ? 'checked' : ''}
+                    onchange="saveQAns(${item.id}, this.value)" class="w-4 h-4 text-indigo-700" />
+                  <span class="text-sm sm:text-base font-bold text-slate-900">${opt}</span>
+                </label>
+              `).join('')}
+            </div>
+          `;
+        } else {
+          bodyHtml = `
+            <input type="text" value="${saved}" placeholder="${item.placeholder}"
+              oninput="saveQAns(${item.id}, this.value)"
+              class="w-full sm:w-72 px-4 py-2.5 rounded-2xl bg-white border-2 border-slate-300 focus:border-indigo-600 focus:outline-none font-mono-code font-bold text-indigo-900 text-base" />
+          `;
+        }
+
+        return `
+          <div id="q-box-${item.id}" class="rounded-3xl border-2 border-slate-300 bg-slate-50 p-6 space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">Thẻ Câu Hỏi ${item.id + 1} / 12</span>
+              ${!showAllQ ? `
+                <div class="flex gap-2">
+                  <button type="button" onclick="jumpQ((activeQIdx - 1 + QUIZ_LIST.length) % QUIZ_LIST.length)" class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-xs font-extrabold">← Câu trước</button>
+                  <button type="button" onclick="jumpQ((activeQIdx + 1) % QUIZ_LIST.length)" class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-xs font-extrabold">Câu sau →</button>
+                </div>
+              ` : ''}
+            </div>
+            <p class="font-display text-lg sm:text-xl font-extrabold text-slate-950">${item.q}</p>
+            ${bodyHtml}
+            <div id="q-fb-${item.id}" class="hidden p-3.5 rounded-2xl text-sm font-semibold"></div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function gradeQuiz() {
+      showAllQ = true;
+      document.getElementById('btn-all-q').textContent = 'Xem từng thẻ (1 câu/lần)';
+      renderQuizPills();
+      renderQuizStage();
+
+      let score = 0;
+      QUIZ_LIST.forEach(item => {
+        const box = document.getElementById(`q-box-${item.id}`);
+        const fb = document.getElementById(`q-fb-${item.id}`);
+        const raw = (answersMap[item.id] ?? '').toString().trim().toLowerCase();
+        const ok = item.type === 'mcq' ? parseInt(raw, 10) === item.ans : item.answers.includes(raw);
+
+        fb.classList.remove('hidden');
+        if (ok) {
+          score++;
+          box.className = 'rounded-3xl border-2 border-emerald-500 bg-emerald-50/70 p-6 space-y-4';
+          fb.className = 'p-3.5 rounded-2xl bg-emerald-100 text-emerald-950 text-sm font-semibold';
+          fb.innerHTML = `<strong>✓ Chính xác!</strong> ${item.exp}`;
+        } else {
+          box.className = 'rounded-3xl border-2 border-rose-500 bg-rose-50/70 p-6 space-y-4';
+          fb.className = 'p-3.5 rounded-2xl bg-rose-100 text-rose-950 text-sm font-semibold';
+          const ansTxt = item.type === 'mcq' ? item.opts[item.ans] : item.answers[0];
+          fb.innerHTML = `<strong>✗ Chưa đúng.</strong> Đáp án: <strong>${ansTxt}</strong>. ${item.exp}`;
+        }
+      });
+
+      document.getElementById('quiz-score').textContent = score;
+    }
+
+    function resetQuiz() {
+      Object.keys(answersMap).forEach(k => delete answersMap[k]);
+      document.getElementById('quiz-score').textContent = '0';
+      renderQuizStage();
+    }
+
+    renderTypeTabs();
+    renderTypeDetail();
+    renderQuizPills();
+    renderQuizStage();
+  </script>
+</body>
+</html>
